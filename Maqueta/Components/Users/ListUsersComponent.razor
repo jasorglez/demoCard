@@ -1,0 +1,90 @@
+﻿@using Bussines
+@using Entities
+
+<h1>User Lists</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="/user/create/" class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Add User
+        </a>
+    </div>
+</div>
+
+<hr />
+<select class="form-control" @onchange="DepartamentChanged">
+    <option value="n">Ver Todos los Departamentos</option>
+    @foreach (var depart in departaments)
+    {
+        <option value="@depart.DepartamentId">@depart.Name</option>
+    }
+</select>
+<hr />
+
+<br />
+@if (users == null)
+  {
+    <p><em>Loading...</em></p>
+  }
+else
+ {
+    <table class="table table-striped align-middle table-bodered">
+        <thead class="table-success">
+            <tr>
+                <th>Corto</th>
+                <th>Nombre</th>
+                <th>Password</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuarios in tmpusers)
+            {
+                <tr>
+                    <td>@usuarios.Namesshort</td>
+                    <td>@usuarios.Name</td>
+                    <td>@usuarios.Password</td>
+                    <td>@usuarios.Email</td>
+                    <td>
+                        <a href='/user/edit/@usuarios.UserId' class="btn btn-secondary" role="button" >
+                            Edit
+                        </a>
+                        <a href='user/delete/@usuarios.UserId' class="btn btn-danger" role="button" >
+                            Delete
+                        </a>
+                    </td>
+      
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    List<UsersEntity> users = new List<UsersEntity>();
+    List<UsersEntity> tmpusers = new List<UsersEntity>();
+    List<DepartamentsEntity> departaments = new List<DepartamentsEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = B_Users.UsersList();
+        tmpusers = users;
+        departaments = B_Departaments.DepartamentList();
+    }
+
+    private void DepartamentChanged(ChangeEventArgs e)
+    {
+        var valor2 = e.Value.ToString();
+        if (valor2 != "n")
+        {
+            int valid = int.Parse(e.Value.ToString());
+            tmpusers = users.Where(u => u.DepartamentId == valid).ToList();
+        }
+        else
+        {
+             tmpusers = users;    
+        }    
+    }
+}

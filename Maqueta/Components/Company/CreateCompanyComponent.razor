@@ -1,0 +1,82 @@
+﻿
+@using Bussines
+@using Entities
+
+@inject NavigationManager NavManager
+
+<h1> Create Company</h1>
+<hr />
+
+<EditForm Model="@companys" OnValidSubmit="SaveCompany">
+    <DataAnnotationsValidator />
+        <div class="mb-3">
+            <label for="Names" class="form-label">Nombre </label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="companys.Name" />
+            </div>
+              <ValidationMessage For="@(() => companys.Name)" />      
+        </div>
+        
+         <div class="mb-3">
+            <label for="Adress" class="form-label">Adress</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="companys.Adress" />
+            </div>
+              <ValidationMessage For="@(() => companys.Adress)" />      
+        </div>
+
+        <div class="mb-3">
+            <label for="Cp" class="form-label">CP</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="companys.Cp" />
+            </div>
+              <ValidationMessage For="@(() => companys.Cp)" />      
+        </div>
+
+         <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="companys.Email" />
+            </div>
+              <ValidationMessage For="@(() => companys.Email)" />      
+        </div>
+
+         <div class="mb-3">
+            <label for="Web" class="form-label">Web</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="companys.Web" />
+            </div>
+              <ValidationMessage For="@(() => companys.Web)" />      
+        </div>
+
+         <div class="mb-3">
+            <label for="Phone" class="form-label">Phone</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="companys.Phone" />
+            </div>
+              <ValidationMessage For="@(() => companys.Phone)" />      
+        </div>
+
+        <div class=form-group>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button class="btn btn-light" @Onclick="Cancel">Cancel</button>
+        </div>
+         
+</EditForm>
+
+@code {
+
+    CompanysEntity companys = new CompanysEntity();
+
+    private void SaveCompany()
+    {
+        B_Company.CreateCompany(companys);
+        NavManager.NavigateTo("/company/list");
+    }
+
+    private void Cancel()
+    {
+              NavManager.NavigateTo("/company/list"); 
+    }
+}
+     

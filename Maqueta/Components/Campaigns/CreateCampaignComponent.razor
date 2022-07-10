@@ -1,0 +1,78 @@
+﻿@page "/campaigns/create"
+
+@using Bussines
+@using Entities
+
+@inject NavigationManager NavManager
+
+<h1> Crear Campaigns</h1>
+<hr />
+
+<EditForm Model="@oCampa" OnValidSubmit="SaveCompany">
+    <DataAnnotationsValidator />
+        <div class="mb-3">
+            <label for="Names" class="form-label">Name </label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oCampa.Name" />
+            </div>
+              <ValidationMessage For="@(() => oCampa.Name)" />      
+        </div>
+        
+         <div class="mb-3">
+            <label for="Descrip" class="form-label">Description</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oCampa.Description" />
+            </div>
+              <ValidationMessage For="@(() => oCampa.Description)" />      
+        </div>
+
+        <div class="mb-3">
+            <label for="Add1" class="form-label">Add 1</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oCampa.Add1" />
+            </div>
+              <ValidationMessage For="@(() => oCampa.Add1)" />      
+        </div>
+
+         <div class="mb-3">
+            <label for="Add2" class="form-label">Add 2</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oCampa.Add2" />
+            </div>
+              <ValidationMessage For="@(() => oCampa.Add2)" />      
+        </div>
+
+           @*donde saco el Combo Box Companys*@
+        <div class="form-group"
+            <label>Company:</label>
+            <InputSelect @bind-Value="oCampa.CompanyId" class="form-control">
+                <option value="">Select Company..</option>
+                @foreach (var comp in companys)
+                {
+                    <option value="@comp.CompanyId" >@comp.Name</option>
+                }
+            </InputSelect>
+        </div>
+
+        <div class=form-group>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button class="btn btn-light" @Onclick="Cancel">Cancel</button>
+        </div>
+         
+</EditForm>
+
+@code {
+    CampaignsEntity oCampa = new CampaignsEntity();
+    List<CompanysEntity> companys = new List<CompanysEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        companys = B_Company.CompanyList();
+    }
+    private void SaveCompany()
+    {
+        B_Campaigns.CreateCampaign(oCampa);
+        NavManager.NavigateTo("/campaign/list");
+    }
+}
+     

@@ -1,0 +1,64 @@
+﻿@using Bussines
+@using Entities
+
+<h1>Departament Lists</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="/departament/create/" class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Add Departament
+        </a>
+    </div>
+</div>
+
+
+<br />
+@if (departaments == null)
+  {
+    <p><em>Loading...</em></p>
+  }
+else
+ {
+    <table class="table table-striped align-middle table-bodered">
+        <thead class="table-success">
+            <tr>
+                <th>Name</th>
+                <th>Leader</th>
+                <th>Field 1</th>
+                <th>Field 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var depart in departaments)
+            {
+                <tr>
+                    <td>@depart.Name</td>
+                    <td>@depart.Leadership</td>
+                    <td>@depart.Add1</td>
+                    <td>@depart.Add2</td>
+                    <td>
+                        <a href='/user/edit/@depart.DepartamentId' class="btn btn-secondary" role="button" >
+                            Edit
+                        </a>
+                        <a href='user/delete/@depart.DepartamentId' class="btn btn-danger" role="button" >
+                            Delete
+                        </a>
+                    </td>
+      
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    List<DepartamentsEntity> departaments = new List<DepartamentsEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        departaments = B_Departaments.DepartamentList();
+    }
+
+}

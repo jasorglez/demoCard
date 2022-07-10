@@ -1,0 +1,99 @@
+﻿@page "/user/create"
+
+@using Bussines
+@using Entities
+
+@inject NavigationManager NavManager
+
+<h1> Crear Usuario</h1>
+<hr />
+
+<EditForm Model="@oUsers" OnValidSubmit="SaveUser">
+    <DataAnnotationsValidator />
+        <div class="mb-3">
+            <label for="Namesshort" class="form-label">Nombre Corto</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oUsers.Namesshort" />
+            </div>
+              <ValidationMessage For="@(() => oUsers.Namesshort)" />      
+        </div>
+        
+         <div class="mb-3">
+            <label for="Password" class="form-label">Password</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oUsers.Password" />
+            </div>
+              <ValidationMessage For="@(() => oUsers.Password)" />      
+        </div>
+
+        <div class="mb-3">
+            <label for="Name" class="form-label">Nombre</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oUsers.Name" />
+            </div>
+              <ValidationMessage For="@(() => oUsers.Name)" />      
+        </div>
+
+         <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oUsers.Email" />
+            </div>
+              <ValidationMessage For="@(() => oUsers.Email)" />      
+        </div>
+
+    @*donde saco el Combo Box Departamentos*@
+        <div class="form-group"
+            <label>Departament:</label>
+            <InputSelect @bind-Value="oUsers.DepartamentId" class="form-control">
+                <option value="">Seleccionar departamento..</option>
+                @foreach (var depart in departaments)
+                { 
+                    <option value="@depart.DepartamentId" >@depart.Name</option>
+                }
+            </InputSelect>
+        </div>
+
+        @*donde saco el Combo Box Companys*@
+        <div class="form-group"
+            <label>Company:</label>
+            <InputSelect @bind-Value="oUsers.CompanyId" class="form-control">
+                <option value="">Seleccionar departamento..</option>
+                @foreach (var comp in companys)
+                { 
+                    <option value="@comp.CompanyId" >@comp.Name</option>
+                }
+            </InputSelect>
+        </div>
+
+        <div class=form-group>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button class="btn btn-light" @Onclick="Cancel">Cancel</button>
+        </div>
+         
+</EditForm>
+
+@code {
+
+    UsersEntity oUsers = new UsersEntity();
+    List<DepartamentsEntity> departaments = new List<DepartamentsEntity>();
+    List<CompanysEntity> companys = new List<CompanysEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        departaments = B_Departaments.DepartamentList();
+        companys = B_Company.CompanyList();
+    }
+
+    private void SaveUser()
+    {
+        B_Users.CreateUser(oUsers);
+        NavManager.NavigateTo("/users/list");
+    }
+    
+    private void Cancel()
+    {
+          NavManager.NavigateTo("/users/list"); 
+    }
+}
+     

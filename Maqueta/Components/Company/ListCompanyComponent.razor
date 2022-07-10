@@ -1,0 +1,70 @@
+﻿@using Bussines
+@using Entities
+
+<h1>Company Lists</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="/company/create/" class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Add Company
+        </a>
+    </div>
+</div>
+
+
+<br />
+@if (companys == null)
+  {
+    <p><em>Loading...</em></p>
+  }
+else
+ {
+    <table class="table table-striped align-middle table-bodered">
+        <thead class="table-success">
+            <tr>
+                <th>Name</th>
+                <th>Adress</th>
+                <th>CP</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>web</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var comp in companys)
+            {
+                <tr>
+                    <td>@comp.Name</td>
+                    <td>@comp.Adress</td>
+                    <td>@comp.Cp</td>
+                    <td>@comp.Phone</td>
+                    <td>@comp.Email</td>
+                    <td>@comp.Web</td>
+                    <td>
+                        <a href='/user/edit/@comp.CompanyId' class="btn btn-secondary" role="button" >
+                            Edit
+                        </a>
+                        <a href='user/delete/@comp.CompanyId' class="btn btn-danger" role="button" >
+                            Delete
+                        </a>
+                    </td>
+      
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    List<CompanysEntity> companys = new List<CompanysEntity>();
+ 
+
+    protected override async Task OnInitializedAsync()
+    {
+        companys = B_Company.CompanyList();
+    }
+
+  
+}

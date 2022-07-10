@@ -1,0 +1,64 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Maqueta</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-credit-card" aria-hidden="true"></span> Card
+            </NavLink>
+        </div>
+
+         <li class="nav-item px-3">
+            <NavLink class="nav-link" href="warehouse/list">
+                <span class="oi oi-calculator" aria-hidden="true"></span> Deposit
+            </NavLink>
+        </li>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/users/list">
+                <span class="oi oi-people" aria-hidden="true"></span> Usuarios
+            </NavLink>
+        </div>
+        
+         <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/company/list">
+                <span class="oi oi-home" aria-hidden="true"></span> Companys
+            </NavLink>
+        </li>
+
+           
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/campaign/list">
+                <span class="oi oi-camera-slr" aria-hidden="true"></span> Campaigns
+            </NavLink>
+        </li>
+
+          <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/departament/list">
+                <span class="oi oi-folder" aria-hidden="true"></span> Departaments
+            </NavLink>
+        </li>
+
+       
+
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
