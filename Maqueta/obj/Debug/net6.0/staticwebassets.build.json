@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BFXofALiepmbu8MRqZxYt/9iaqH/Gx0MHtI/EG9/rCk=",
+  "Hash": "ELGF2cy+BWEz4LNBKEYpnoIjemujKNNUI7JyQyeyoT8=",
   "Source": "Maqueta",
   "BasePath": "_content/Maqueta",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Maqueta\\wwwroot",
       "Source": "Maqueta",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Maqueta.styles.css",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Maqueta.styles.css",
       "SourceId": "Maqueta",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "Maqueta.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Maqueta.styles.css"
+      "OriginalItemSpec": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Maqueta.styles.css"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Maqueta.bundle.scp.css",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Maqueta.bundle.scp.css",
       "SourceId": "Maqueta",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "Maqueta.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Maqueta.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Maqueta.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\site.css",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\css\\style.css",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\favicon.ico",
       "SourceId": "Maqueta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\wwwroot\\",
+      "ContentRoot": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\wwwroot\\",
       "BasePath": "_content/Maqueta",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

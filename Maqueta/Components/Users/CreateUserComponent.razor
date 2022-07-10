@@ -22,6 +22,7 @@
             <label for="Password" class="form-label">Password</label>
             <div class="col-md-4">
                 <InputText class="form-control" @bind-Value="oUsers.Password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
               <ValidationMessage For="@(() => oUsers.Password)" />      
         </div>
@@ -38,8 +39,25 @@
             <label for="Email" class="form-label">Email</label>
             <div class="col-md-4">
                 <InputText class="form-control" @bind-Value="oUsers.Email" />
+                <span asp-validation-for="oUsers.Email" class="text-danger"></span>
             </div>
               <ValidationMessage For="@(() => oUsers.Email)" />      
+        </div>
+
+        <div class="mb-3">
+            <label for="Field 1" class="form-label">Field 1</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oUsers.Field1" />
+            </div>
+              <ValidationMessage For="@(() => oUsers.Field1)" />      
+        </div>
+
+       <div class="mb-3">
+            <label for="Field 2" class="form-label">Field 2</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="oUsers.Field2" />
+            </div>
+              <ValidationMessage For="@(() => oUsers.Field2)" />      
         </div>
 
     @*donde saco el Combo Box Departamentos*@

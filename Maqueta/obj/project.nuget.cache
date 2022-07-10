@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RxZiuPH1wcMvqIUv5mwjK9nHQGa7lxx6NUF6AkEJ6XbFKfEHvQtIJV/zJ3li/NqKf3FOUjrSdUpJkVh3wfBJhg==",
+  "dgSpecHash": "QvDecerOQ2aPkJjnQ3maZefnsU0SEpgoPm7A0FNwztau4qJCS2LD7B+k0AYy9H5AVvfsDgSo49+nq/6IRPTsug==",
   "success": true,
-  "projectFilePath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\Maqueta.csproj",
+  "projectFilePath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JSoriano\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

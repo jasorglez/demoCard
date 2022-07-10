@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\Maqueta.csproj": {}
+    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj": {}
   },
   "projects": {
-    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Bussines\\Bussines.csproj": {
+    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Bussines\\Bussines.csproj",
+        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj",
         "projectName": "Bussines",
-        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Bussines\\Bussines.csproj",
+        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj",
         "packagesPath": "C:\\Users\\JSoriano\\.nuget\\packages\\",
-        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Bussines\\obj\\",
+        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\DataAccess\\DataAccess.csproj"
+              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj"
+              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\DataAccess\\DataAccess.csproj": {
+    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\JSoriano\\.nuget\\packages\\",
-        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\DataAccess\\obj\\",
+        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj"
+              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj"
               }
             }
           }
@@ -147,14 +147,14 @@
         }
       }
     },
-    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj": {
+    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\JSoriano\\.nuget\\packages\\",
-        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\obj\\",
+        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -205,14 +205,14 @@
         }
       }
     },
-    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\Maqueta.csproj": {
+    "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\Maqueta.csproj",
+        "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
         "projectName": "Maqueta",
-        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\Maqueta.csproj",
+        "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
         "packagesPath": "C:\\Users\\JSoriano\\.nuget\\packages\\",
-        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Maqueta\\obj\\",
+        "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -233,11 +233,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Bussines\\Bussines.csproj": {
-                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Bussines\\Bussines.csproj"
+              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj": {
+                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj"
               },
-              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\Maqueta\\Entities\\Entities.csproj"
+              "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj"
               }
             }
           }
