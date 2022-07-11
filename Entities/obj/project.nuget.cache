@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cHyZ5NUSQSTLtQCpE+cXUlqK1cPipMgAhsvYM8RvTvf6PrnFo30u4pUSfUvWEgGPV2TUFN4TSeXtr7BUD8G2gg==",
+  "dgSpecHash": "6Ppw3GUsiyI1K6awEa8tOXtF6bynJ35gVKJ465myafhg0TUvsyvVAG+GNyFklAxXp6UlyUB6psZxngelj4bgnA==",
   "success": true,
-  "projectFilePath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj",
+  "projectFilePath": "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,0 +1,30 @@
+﻿@page "/user/delete/{IdUser:int}"
+
+@using Bussines
+@using Entities
+
+@inject NavigationManager NavManager
+@inject IJSRuntime JsRuntime
+
+@code {
+    [Parameter]
+    public int IdUser { get; set; }
+    protected string Title = "" ;
+
+    UsersEntity oUsers = new UsersEntity();
+
+    protected override async Task OnInitializedAsync()
+    {
+       
+    bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure, Delete?"); // Confirm
+    if (confirmed) {  
+            Title = "Delete";
+            oUsers=  B_Users.UserById(IdUser);
+            B_Users.DeleteById(oUsers);
+        }  
+     NavManager.NavigateTo("/users/list"); 
+    }
+
+   //  await JsRuntime.InvokeVoidAsync("alert", "Warning!"); // Alert
+  //   string prompted = await JsRuntime.InvokeAsync<string>("prompt", "Take some input:"); // Prompt
+}

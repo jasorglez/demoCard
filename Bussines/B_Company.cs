@@ -14,7 +14,7 @@ namespace Bussines
             {
                 using (var db = new EndavaContext())
                 {
-                    return db.Companys.ToList();
+                    return db.Companys.Where(c=>c.Active==true).ToList();
                 }
             }
 
@@ -26,10 +26,12 @@ namespace Bussines
                 }
             }
 
-            public static void CreateCompany(CompanysEntity oCompany)
+
+        public static void CreateCompany(CompanysEntity oCompany)
             {
                 using (var db = new EndavaContext())
                 {
+                    oCompany.Active = true;
                     db.Companys.Add(oCompany);
                     db.SaveChanges();
                 }
@@ -43,5 +45,16 @@ namespace Bussines
                     db.SaveChanges();
                 }
             }
+
+        public static void DeleteById(CompanysEntity comp)
+        {
+            using (var db = new EndavaContext())
+            {
+                comp.Active = false;
+                db.Companys.Update(comp);
+                db.SaveChanges();
+            }
+        }
+
     }
 }

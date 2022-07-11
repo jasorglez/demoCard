@@ -1,4 +1,6 @@
 ﻿
+@page "/company/edit/{IdCompany:int}"
+
 @using Bussines
 @using Entities
 
@@ -10,7 +12,7 @@
 <EditForm Model="@companys" OnValidSubmit="SaveCompany">
     <DataAnnotationsValidator />
         <div class="mb-3">
-            <label for="Names" class="form-label">Nombre </label>
+            <label for="Names" class="form-label">Name </label>
             <div class="col-md-4">
                 <InputText class="form-control" @bind-Value="companys.Name" />
             </div>
@@ -65,13 +67,34 @@
 </EditForm>
 
 @code {
+    [Parameter]
+    public int IdCompany { get; set; }
+    protected string Title = "Nuevo" ;
 
     CompanysEntity companys = new CompanysEntity();
 
+    protected override async Task OnInitializedAsync()
+    {
+        if (IdCompany != 0)
+        {
+            Title = "Editar";
+            companys= B_Company.CompanyById(IdCompany);
+        }  
+    }
+
     private void SaveCompany()
     {
-        B_Company.CreateCompany(companys);
-        NavManager.NavigateTo("/company/list");
+        if (companys.CompanyId != 0)
+        {
+           B_Company.UpdateCompany(companys);
+           NavManager.NavigateTo("/company/list"); 
+        }
+        else
+        {
+           B_Company.CreateCompany(companys);
+           NavManager.NavigateTo("/company/list"); 
+        }
+
     }
 
     private void Cancel()

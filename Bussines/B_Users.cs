@@ -14,7 +14,7 @@ namespace Bussines
         {
             using (var db = new EndavaContext())
             {
-                return db.Users.ToList();
+                 return db.Users.Where(u => u.Active == true).ToList();
             }
         }
 
@@ -23,6 +23,7 @@ namespace Bussines
             using (var db = new EndavaContext())
             {
                 return db.Users.ToList().LastOrDefault(u => u.UserId == id);
+
             }
         }
 
@@ -30,19 +31,39 @@ namespace Bussines
         {
             using (var db = new EndavaContext())
             {
-
+                oUser.Active = true;
                 db.Users.Add(oUser);
                 db.SaveChanges();
             }
         }
 
-        public static void UpdateUser(UsersEntity oUser)
+        public static void UpdateUser(UsersEntity User)
         {
             using (var db = new EndavaContext())
             {
-                db.Users.Update(oUser);
+                
+                db.Users.Update(User);
                 db.SaveChanges();
             }
         }
+
+        public static void DeleteById(UsersEntity User)
+        {
+            using (var db = new EndavaContext())
+            {
+                User.Active = false;
+                db.Users.Update(User);
+                db.SaveChanges();
+            }
+        }
+
+        public static void Cancelar(UsersEntity User)
+        {
+            using (var db = new EndavaContext())
+            {
+
+            }
+        }
+
     }
 }

@@ -1,0 +1,30 @@
+﻿@page "/departament/delete/{IdDepartament:int}"
+
+@using Bussines
+@using Entities
+
+@inject NavigationManager NavManager
+@inject IJSRuntime JsRuntime
+
+@code {
+    [Parameter]
+    public int IdDepartament { get; set; }
+    protected string Title = "" ;
+
+    DepartamentsEntity oDepartament = new DepartamentsEntity();
+
+    protected override async Task OnInitializedAsync()
+    {
+       
+    bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure, Delete?"); // Confirm
+    if (confirmed) {  
+            Title = "Delete";
+            oDepartament=  B_Departaments.DepartamentById(IdDepartament);
+            B_Departaments.DeleteById(oDepartament);
+        }  
+     NavManager.NavigateTo("/departament/list"); 
+    }
+
+   //  await JsRuntime.InvokeVoidAsync("alert", "Warning!"); // Alert
+  //   string prompted = await JsRuntime.InvokeAsync<string>("prompt", "Take some input:"); // Prompt
+}

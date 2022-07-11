@@ -12,17 +12,20 @@ namespace Entities
         [Key]
         public int UserId { get; set; }
 
+
         [Required(ErrorMessage = "* Name short Required")]
+        [MinLength(2)]
         public string? Namesshort { get; set; }
+
         
         [Required(ErrorMessage = "* Password Required")]
         [DataType(DataType.Password)]
         public string? Password { get; set; }
-        
+
         [Required(ErrorMessage = "* Name Required")]
         public string? Name { get; set; }
 
-        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         [Required(ErrorMessage = "El campo correo Electronico es Obligatorio")]
         [StringLength(100, ErrorMessage = "El correo electronico no es una direccion de Correo Electronico Valida")]
         public string? Email { get; set; }

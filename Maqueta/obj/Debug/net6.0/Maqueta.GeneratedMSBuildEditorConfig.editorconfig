@@ -23,6 +23,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1wYWlnbnNcQ3JlYXRlQ2FtcGFpZ25Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Campaigns/DeleteCampaignComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1wYWlnbnNcRGVsZXRlQ2FtcGFpZ25Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Campaigns/ListCampaignComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1wYWlnbnNcTGlzdENhbXBhaWduQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -35,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wYW55XENyZWF0ZUNvbXBhbnlDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Company/DeleteCompanyComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wYW55XERlbGV0ZUNvbXBhbnlDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Company/ListCompanyComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wYW55XExpc3RDb21wYW55Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -43,12 +51,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXBhcnRhbWVudHNcQ3JlYXRlRGVwYXJ0YW1lbnRDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Departaments/DeleteDepartamentComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXBhcnRhbWVudHNcRGVsZXRlRGVwYXJ0YW1lbnRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Departaments/ListDepartamentComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXBhcnRhbWVudHNcTGlzdERlcGFydGFtZW50Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Users/CreateUserComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2Vyc1xDcmVhdGVVc2VyQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Users/DeleteUserComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2Vyc1xEZWxldGVVc2VyQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Users/ListUsersComponent.razor]

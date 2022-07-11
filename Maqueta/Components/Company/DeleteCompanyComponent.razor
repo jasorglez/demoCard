@@ -1,0 +1,30 @@
+﻿@page "/company/delete/{IdCompany:int}"
+
+@using Bussines
+@using Entities
+
+@inject NavigationManager NavManager
+@inject IJSRuntime JsRuntime
+
+@code {
+    [Parameter]
+    public int IdCompany { get; set; }
+    protected string Title = "" ;
+    
+    CompanysEntity oCompany = new CompanysEntity();
+
+    protected override async Task OnInitializedAsync()
+    {
+       
+    bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure, Delete?"); // Confirm
+    if (confirmed) {  
+            Title = "Delete";
+            oCompany=  B_Company.CompanyById(IdCompany);
+            B_Company.DeleteById(oCompany);
+        }  
+     NavManager.NavigateTo("/company/list"); 
+    }
+
+   //  await JsRuntime.InvokeVoidAsync("alert", "Warning!"); // Alert
+  //   string prompted = await JsRuntime.InvokeAsync<string>("prompt", "Take some input:"); // Prompt
+}

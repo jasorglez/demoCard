@@ -14,15 +14,24 @@ namespace Bussines
         {
             using (var db = new EndavaContext())
             {
-                return db.Departaments.ToList();
+                return db.Departaments.Where(d =>d.Active==true).ToList();
             }
         }
+        
+        public static DepartamentsEntity DepartamentById(int id)
+        {
+            using (var db = new EndavaContext())
+            {
+                return db.Departaments.ToList().LastOrDefault(u => u.DepartamentId == id);
 
-
+            }
+        }
+   
         public static void CreateDepartament(DepartamentsEntity oDepartam)
         {
             using (var db = new EndavaContext())
             {
+                oDepartam.Active = true;
                 db.Departaments.Add(oDepartam);
                 db.SaveChanges();
             }
@@ -33,6 +42,16 @@ namespace Bussines
             using (var db = new EndavaContext())
             {
                 db.Departaments.Update(oDepartament);
+                db.SaveChanges();
+            }
+        }
+
+        public static void DeleteById(DepartamentsEntity dep)
+        {
+            using (var db = new EndavaContext())
+            {
+                dep.Active = false;
+                db.Departaments.Update(dep);
                 db.SaveChanges();
             }
         }

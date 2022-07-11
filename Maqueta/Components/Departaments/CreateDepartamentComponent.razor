@@ -1,10 +1,12 @@
 ﻿
+@page "/departament/edit/{IdDepartament:int}"
+
 @using Bussines
 @using Entities
 
 @inject NavigationManager NavManager
 
-<h1> Crear Usuario</h1>
+<h1> Create Departament</h1>
 <hr />
 
 <EditForm Model="@oDepartament" OnValidSubmit="SaveDepartament">
@@ -49,13 +51,33 @@
 </EditForm>
 
 @code {
-
+    [Parameter]
+    public int IdDepartament { get; set; }
+    protected string Title = "Nuevo" ;
     DepartamentsEntity oDepartament = new  DepartamentsEntity();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (IdDepartament != 0)
+        {
+            Title = "Editar";
+            oDepartament= B_Departaments.DepartamentById(IdDepartament);
+        }  
+    }
 
     private void SaveDepartament()
     {
-        B_Departaments.CreateDepartament(oDepartament);
-        NavManager.NavigateTo("/departament/list");
+        if (oDepartament.DepartamentId !=0)
+        {
+            B_Departaments.UpdateDepartament(oDepartament);
+            NavManager.NavigateTo("/departament/list"); 
+        }
+        else
+        {
+            B_Departaments.CreateDepartament(oDepartament);
+            NavManager.NavigateTo("/departament/list"); 
+        }
+  
     }
      private void Cancel()
     {

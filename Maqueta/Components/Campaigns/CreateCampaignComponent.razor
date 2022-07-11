@@ -1,4 +1,5 @@
 ﻿@page "/campaigns/create"
+@page "/campaign/edit/{IdCampaign:int}"
 
 @using Bussines
 @using Entities
@@ -62,17 +63,37 @@
 </EditForm>
 
 @code {
+    [Parameter]
+    public int IdCampaign { get; set; }
+    protected string Title = "Nuevo"; 
+
     CampaignsEntity oCampa = new CampaignsEntity();
     List<CompanysEntity> companys = new List<CompanysEntity>();
 
     protected override async Task OnInitializedAsync()
     {
         companys = B_Company.CompanyList();
+        if (IdCampaign != 0)
+        {
+            Title = "Editar";
+            oCampa= B_Campaigns.CampaignById(IdCampaign);
+        }  
     }
+
+
     private void SaveCompany()
     {
-        B_Campaigns.CreateCampaign(oCampa);
-        NavManager.NavigateTo("/campaign/list");
+        if (oCampa.CampaignId != 0)
+        {
+            B_Campaigns.UpdateCampaign(oCampa);
+            NavManager.NavigateTo("/campaign/list");
+        }
+        else
+        {
+            B_Campaigns.CreateCampaign(oCampa);
+            NavManager.NavigateTo("/campaign/list"); 
+        }
+       
     }
 }
      

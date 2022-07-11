@@ -1,0 +1,28 @@
+﻿@page "/campaign/delete/{IdCampaign:int}"
+
+@using Bussines
+@using Entities
+
+@inject NavigationManager NavManager
+@inject IJSRuntime JsRuntime
+
+@code {
+    [Parameter]
+    public int IdCampaign { get; set; }
+    
+    CampaignsEntity oCampan = new CampaignsEntity();
+
+    protected override async Task OnInitializedAsync()
+    {
+       
+    bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure, Delete?"); // Confirm
+    if (confirmed) {  
+            oCampan=  B_Campaigns.CampaignById(IdCampaign);
+            B_Campaigns.DeleteById(oCampan);
+        }  
+     NavManager.NavigateTo("/campaign/list"); 
+    }
+
+   //  await JsRuntime.InvokeVoidAsync("alert", "Warning!"); // Alert
+  //   string prompted = await JsRuntime.InvokeAsync<string>("prompt", "Take some input:"); // Prompt
+}

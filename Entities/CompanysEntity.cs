@@ -16,17 +16,25 @@ namespace Entities
         }
         [Key]
         public int CompanyId { get; set; }
-        [Required(ErrorMessage = "* Obligatorio")]
-        public string? Name { get; set; }
-        public string? Adress { get; set; }
-        [Required(ErrorMessage = "* Obligatorio")]
-        public string? Cp { get; set; }
-        [Required(ErrorMessage = "* Obligatorio")]
-        public string? Phone { get; set; }
-        [Required(ErrorMessage = "* Obligatorio")]
-        public string? Email { get; set; }
 
-        [Required(ErrorMessage = "* Obligatorio")]
+        [Required(ErrorMessage = "Name Required")]
+        public string? Name { get; set; }
+
+        [Required(ErrorMessage = "Adress Required")]
+        public string? Adress { get; set; }
+       
+        [Required(ErrorMessage = "Cp Required")]
+        public string? Cp { get; set; }
+
+        [Phone]
+        [Required(ErrorMessage = "Phone Required")]
+        public string? Phone { get; set; }
+       
+        [EmailAddress]
+        [Required(ErrorMessage = "Email Required")]
+        public string? Email { get; set; }
+      
+        [Url]
         public string? Web { get; set; }
         public bool? Active { get; set; }
 

@@ -1,17 +1,19 @@
 ﻿@page "/user/create"
+@page "/user/edit/{IdUser:int}"
 
 @using Bussines
 @using Entities
 
 @inject NavigationManager NavManager
 
-<h1> Crear Usuario</h1>
+<h1> @Title Usuario</h1>
 <hr />
 
 <EditForm Model="@oUsers" OnValidSubmit="SaveUser">
     <DataAnnotationsValidator />
         <div class="mb-3">
-            <label for="Namesshort" class="form-label">Nombre Corto</label>
+        
+        <label for="Namesshort" class="form-label">Nombre Corto</label>
             <div class="col-md-4">
                 <InputText class="form-control" @bind-Value="oUsers.Namesshort" />
             </div>
@@ -21,7 +23,7 @@
          <div class="mb-3">
             <label for="Password" class="form-label">Password</label>
             <div class="col-md-4">
-                <InputText class="form-control" @bind-Value="oUsers.Password" />
+                <InputText type="password" placeholder="Password" class="form-control" @bind-Value="oUsers.Password" />
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
               <ValidationMessage For="@(() => oUsers.Password)" />      
@@ -92,6 +94,9 @@
 </EditForm>
 
 @code {
+    [Parameter]
+    public int IdUser { get; set; }
+    protected string Title = "Nuevo" ;
 
     UsersEntity oUsers = new UsersEntity();
     List<DepartamentsEntity> departaments = new List<DepartamentsEntity>();
@@ -101,16 +106,32 @@
     {
         departaments = B_Departaments.DepartamentList();
         companys = B_Company.CompanyList();
+         if (IdUser != 0)
+        {
+            Title = "Editar";
+            oUsers= B_Users.UserById(IdUser);
+        }  
     }
 
-    private void SaveUser()
+    protected async Task SaveUser()
     {
-        B_Users.CreateUser(oUsers);
-        NavManager.NavigateTo("/users/list");
+        if (oUsers.UserId != 0)
+        {
+            B_Users.UpdateUser(oUsers);
+            NavManager.NavigateTo("/users/list"); 
+
+        }
+        else
+        {
+            B_Users.CreateUser(oUsers);
+            NavManager.NavigateTo("/users/list");   
+        }
+
     }
     
     private void Cancel()
     {
+          
           NavManager.NavigateTo("/users/list"); 
     }
 }

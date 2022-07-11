@@ -17,9 +17,9 @@ namespace Entities
         public int DepartamentId { get; set; }
         public string Name { get; set; } = null!;
         public string Leadership { get; set; } = null!;
-        public string Add1 { get; set; }
-        public string Add2 { get; set; }
-        public bool? Active { get; set; }
+        public string? Add1 { get; set; }
+        public string? Add2 { get; set; }
+        public bool Active { get; set; }
 
         public virtual ICollection<UsersEntity> Users { get; set; }
     }
