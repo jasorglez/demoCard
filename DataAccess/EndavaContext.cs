@@ -19,7 +19,7 @@ namespace DataAccess
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("Server=ic10.database.windows.net; Database=EndavaTest;User Id=jsoriano; Password=Qpzm1984");
+                options.UseSqlServer("Server=ic10.database.windows.net; Database=EndavaTest;User Id=jsoriano; Password=");
             }
         }
 
