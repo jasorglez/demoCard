@@ -11,6 +11,11 @@
 # context
 EndavaContext.cs
 
+# Folders
+bin/
+obj/
+Migration/
+
 # User-specific files
 *.rsuser
 *.suo
