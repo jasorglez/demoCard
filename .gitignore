@@ -13,7 +13,10 @@ EndavaContext.cs
 
 # Folders
 bin/
-obj/
+Entities/obj/
+DataAcess/obj/
+Business/obj/
+Maqueta/obj
 Migration/
 
 # User-specific files
