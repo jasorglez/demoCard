@@ -14,6 +14,8 @@ namespace DataAccess
         public DbSet<DepartamentsEntity> Departaments { get; set; }
         public DbSet<CompanysEntity> Companys { get; set; }
         public DbSet<CampaignsEntity> Campaigns { get; set; }
+        public DbSet<KardexEntity> Kardex { get; set; }
+        public DbSet<GpaordersEntity> Gpaorders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

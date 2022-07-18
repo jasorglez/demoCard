@@ -1,0 +1,118 @@
+﻿@using Entities
+@using Bussines
+@using Newtonsoft.Json;
+@using System.Text;
+@using System.Text.Json;
+@using System.Text.Json.Serialization;
+
+@inject NavigationManager NavManager
+
+
+<EditForm Model="@tablagpaorder" OnValidSubmit="SaveGpa">
+    <DataAnnotationsValidator />
+        <div class="mb-3">
+        
+        <label for="Namesshort" class="form-label">Fecha</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="tablagpaorder.fecha" />
+            </div>
+              <ValidationMessage For="@(() => tablagpaorder.fecha)" />      
+        </div>
+        
+         <div class="mb-3">
+            <label for="usertoken" class="form-label">User Token</label>
+            <div class="col-md-4">
+                <InputText type="Text" placeholder="user_token" class="form-control" @bind-Value="tablagpaorder.user_token" />
+                <span asp-validation-for="Input.text" class="text-danger"></span>
+            </div>
+              <ValidationMessage For="@(() => tablagpaorder.user_token)" />      
+        </div>
+
+       <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <div class="col-md-4">
+                <InputNumber  placeholder="Amount" class="form-control" @bind-Value="tablagpaorder.amount " />
+
+            </div>
+              <ValidationMessage For="@(() => tablagpaorder.amount)" />      
+        </div>
+
+           <div class="mb-3">
+            <label for="currencycode" class="form-label">Currency Code</label>
+            <div class="col-md-4">
+                <InputText placeholder="USD" class="form-control" @bind-Value="tablagpaorder.currencycode "/>
+            </div>
+              <ValidationMessage For="@(() => tablagpaorder.amount)" />      
+        </div>
+
+           <div class="mb-3">
+            <label for="funding" class="form-label">Funding Source</label>
+            <div class="col-md-4">
+               
+                <InputText  placeholder="sandbox_program_funding" class="form-control" @bind-Value="tablagpaorder.fundingsource" />
+            </div>                      
+              <ValidationMessage For="@(() => tablagpaorder.currencycode)" />      
+        </div>
+
+        <div class=form-group>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button class="btn btn-light" @onclick="Cancelar">Cancel</button>
+
+        </div>
+         
+</EditForm>
+
+@code {
+
+    KardexEntity kardex = new KardexEntity ();
+
+    GpaordersEntity tablagpaorder = new GpaordersEntity();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //  B_Kardex.CreateKardex(kardex, "Operation with POST in Maqeta",  "Create a Foundig/Deposit Card IN Database y post Api Maqeta", "Server=ic10.database.windows.net" );
+
+    }
+
+    protected async Task SaveGpa()
+    {
+        B_Gpaorders.CreateGpa(tablagpaorder);
+
+        string url = "https://sandbox-api.marqeta.com/v3/gpaorders";
+        var byteArray = Encoding.ASCII.GetBytes(("5f19cdd3-f48c-4c9e-8c76-035485bc5847:fc09b65b-e271-44f0-be4c-1d03af59042e"));
+        JsonSerializerOptions options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
+
+        GpaOrders deposito = new GpaOrders();
+        deposito.user_token           = tablagpaorder.user_token;
+        deposito.amount               = tablagpaorder.amount;
+        deposito.currency_code        = tablagpaorder.currencycode;
+        deposito.funding_source_token = tablagpaorder.fundingsource;
+
+        using (var httpClient = new HttpClient())
+        {
+            httpClient.DefaultRequestHeaders.Authorization =
+                   new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
+
+            var json = JsonConvert.SerializeObject(deposito);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await httpClient.PostAsync(url, data);
+            var result = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+
+                B_Kardex.CreateKardex(kardex, "Operation with POST in Maqeta",  
+                                              "Create a Foundig/Deposit Card IN Database y post Api Maqeta", 
+                                              "User=jsoriano currency code=USD sandbox_program_funding",
+                                              result);
+            }
+
+        }
+
+    }
+
+    private void Cancelar()
+    {
+        NavManager.NavigateTo("/"); 
+    }                          
+   
+}

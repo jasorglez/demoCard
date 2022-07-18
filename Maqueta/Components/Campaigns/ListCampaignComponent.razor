@@ -67,12 +67,14 @@ else
     List<CampaignsEntity> campaigns = new List<CampaignsEntity>();
     List<CampaignsEntity> tmpcamp = new List<CampaignsEntity>();
     List<CompanysEntity> company = new List<CompanysEntity>();
+    KardexEntity kardex = new KardexEntity();
 
     protected override async Task OnInitializedAsync()
     {
         campaigns = B_Campaigns.CampaignList();
         tmpcamp = campaigns;
         company = B_Company.CompanyList();
+        B_Kardex.CreateKardex(kardex, "Main Campaigns, operation Database", "List of campaigns", "Server=ic10.database.windows.net", "OPERACION DATABASE LECTURA" );
     }
       private void CampaChanged(ChangeEventArgs e)
     {

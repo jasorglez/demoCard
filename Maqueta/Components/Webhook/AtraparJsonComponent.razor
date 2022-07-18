@@ -1,0 +1,69 @@
+﻿
+@using System.Text.Json.Nodes;
+@using System.Text;
+@using System.Text.Json.Serialization;
+@using System.Web
+@using System.Net
+@using System.Diagnostics
+@using Entities
+@using Bussines
+@using Newtonsoft.Json
+
+<h3> Log Webhook</h3>
+<h3> ------</h3>
+
+@if (kardex == null)
+  {
+    <p><em>Loading...</em></p>
+  }
+else
+ {
+    <table class="table table-striped align-middle table-bodered">
+        <thead class="table-success">
+            <tr>
+                <th>User</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Card Token</th>
+                <th>Servidor</th>
+                <th>Num. Transaccion</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var kard in kardex)
+            {
+                <tr>
+                    <td>Jose Angel Soriano</td>
+                    <td>@kard.fecha</td>
+                    <td>@kard.hora</td>
+                    <td>@kard.card</td>
+                    <td>@kard.transaccion2</td>
+                    <td>@kard.transaccion3</td>
+                    <td>
+                       
+                    </td>
+      
+                </tr>
+            }
+        </tbody>
+    </table>
+   }
+
+ @code 
+{
+    public string inform {get; set;}
+    public string parameter;
+    List<KardexEntity> kardex = new List<KardexEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        kardex = B_Kardex.kardexList();
+
+       var uri = "http://127.0.0.1:4040/inspect/http";
+        var psi = new System.Diagnostics.ProcessStartInfo();
+        psi.UseShellExecute = true;
+        psi.FileName = uri;
+        System.Diagnostics.Process.Start(psi); 
+    }
+}

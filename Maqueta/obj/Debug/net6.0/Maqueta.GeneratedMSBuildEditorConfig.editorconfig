@@ -31,8 +31,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYW1wYWlnbnNcTGlzdENhbXBhaWduQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Card/FundingSourceComp.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJkXEZ1bmRpbmdTb3VyY2VDb21wLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Card/MovementsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJkXE1vdmVtZW50c0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Card/NumberCardComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJkXE51bWJlckNhcmRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Company/ComboCompanyComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wYW55XENvbWJvQ29tcGFueUNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Company/CreateCompanyComponent.razor]
@@ -59,6 +71,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXBhcnRhbWVudHNcTGlzdERlcGFydGFtZW50Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Login/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMb2dpblxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Users/CreateUserComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2Vyc1xDcmVhdGVVc2VyQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -69,6 +85,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Users/ListUsersComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2Vyc1xMaXN0VXNlcnNDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Components/Webhook/AtraparJsonComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xXZWJob29rXEF0cmFwYXJKc29uQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Pages/Campaigns/CreateCampaignsPage.razor]
@@ -95,6 +115,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0YW1lbnRzXExpc3REZXBhcnRhbWVudHNQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Pages/Deposit/DepositCampaignComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwb3NpdFxEZXBvc2l0Q2FtcGFpZ25Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Pages/Deposit/DepositCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwb3NpdFxEZXBvc2l0Q2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -105,6 +133,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Pages/Users/ListUsersPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcTGlzdFVzZXJzUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Pages/Webhook/AtraparJsonPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2ViaG9va1xBdHJhcGFySnNvblBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Shared/LoginLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Developer/Visual Studio 2022/Blazor/Endava/demoCard/Maqueta/Shared/SurveyPrompt.razor]

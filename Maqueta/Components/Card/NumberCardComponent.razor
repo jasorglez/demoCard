@@ -1,7 +1,10 @@
 ﻿@using System.Text.Json;
 @using System.Text;
+@using Bussines
 @using Entities;
 @using System.Text.Json.Serialization;
+
+@*@inject IKardex kardexBussinnes;*@
 
 
 <head>
@@ -13,46 +16,21 @@
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Avaiable:$ @Saldo </p>
 </body>
-  
-<p>Estado de Cuenta</p>
-     <table class="table table-hover table-bordered">
-        <thead>
-              <tr>
-                  <th>Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                   <th>Amount &nbsp;&nbsp;&nbsp;&nbsp;</th>
-                   <th>Available Balance&nbsp;&nbsp</th>
-                   <th>Deposit</th>
-                   <th>Deposit test</th>
-                   <th>Type Currency</th>
-              </tr>
-        </thead>
-               <tbody>
-                    @foreach (var lista in listavalores)
-                    {
-                        <tr>
-                            <td>@lista.Campo1</td>
-                            <td>$@lista.Campo2</td>
-                            <td>$@lista.Campo3</td>
-                             <td>$@lista.Campo5</td>
-                             <td>$@lista.Campo6</td>
-                            <td>@lista.Campo4</td>
-                        </tr>
-                    }
-                </tbody>
-    </table>
+
     
 @code {
+
     [Parameter]
     public string Tarjeta { get; set; }
     public Double Saldo { get; set; }
     public string Utoken { get; set; }
+    string operacion ;
+    public string content2 ;
 
     string usuario = "jsoriano";
     string card_token = "1deac936-7e1f-4ce6-bead-8f17b46b273c";
-    string valor1;
-    Double cantidad;
 
-    List<Valores> listavalores = new List<Valores>();
+    KardexEntity kardex = new KardexEntity();
 
     protected override async Task OnInitializedAsync()
     {
@@ -68,10 +46,12 @@
 
             //las llamadas las tarjetas por usuario
             string urlcard=url+"cards/user/"+usuario;
+
             //el saldo total de la tarjeta
             string urlbalance=url+"balances/"+usuario;
-            // esta llamada es la de los movimientos
-            string urlmovimientos=url+"transactions/?card_token="+card_token;
+
+
+            string cadenadendpoint = "Realizado GET " + urlcard;
 
             var response = await httpClient.GetAsync(urlcard);
             if (response.IsSuccessStatusCode)
@@ -81,7 +61,8 @@
                 foreach (var user in usuario.data)
                 {
                     Tarjeta = user.last_four;
-                    Utoken = user.user_token;
+                    Utoken  = user.user_token;
+                    operacion = user.card_product_token;
                 }
             }
             else
@@ -92,46 +73,16 @@
             if (respbal.IsSuccessStatusCode)
             {
                 var content = await respbal.Content.ReadAsStringAsync();
+                content2 = content;
                 var balance = JsonSerializer.Deserialize<Balance.balancetotal>(content, options);
                 Saldo = balance.gpa.available_balance;
 
             }
             else
                 Saldo = 0.00;
-
-            //para las transacciones
-            var respmov = await httpClient.GetAsync(urlmovimientos);
-            if (respmov.IsSuccessStatusCode)
-            {
-                var content = await respmov.Content.ReadAsStringAsync();
-                var movimientos = JsonSerializer.Deserialize<Transactionsbycard.Root>(content, options);
-                var movimientos2 = JsonSerializer.Deserialize<Transactionsbycard.Root>(content, options);
-
-                Valores vl = new Valores();
-
-                foreach(var mov in movimientos.data)
-                {
-                    
-                    listavalores.Add(new Valores()
-                        {
-                            Campo1 = mov.created_time,
-                            Campo2 = mov.amount,
-                            Campo3 = mov.gpa.available_balance,
-                            Campo4 = mov.currency_code,
-                            Campo5 = mov.amount + mov.gpa.available_balance,
-                            Campo6 = mov.gpa.ledger_balance
-                        });
-                }
-            }
-            else
-                Tarjeta = "Not Card";
+         
+            B_Kardex.CreateKardex(kardex, "Main Card card_token = 1deac936-7e1f-4ce6-bead-8f17b46b273c",
+                                           cadenadendpoint, operacion, content2);
         }
     }
-
-    //public object JsonDeserialize(Type dataType, string filepath)
-    //{
-    //    JObject obj = null;
-    //    JsonSerializer jsonSerializer = new JsonSerializer();
-
-    //}    
 }

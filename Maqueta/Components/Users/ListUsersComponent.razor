@@ -13,6 +13,7 @@
 </div>
 
 <hr />
+
 <select class="form-control" @onchange="DepartamentChanged">
     <option value="n">Ver Todos los Departamentos</option>
     @foreach (var depart in departam)
@@ -20,6 +21,7 @@
         <option value="@depart.DepartamentId">@depart.Name</option>
     }
 </select>
+
 <hr />
 
 <br />
@@ -68,12 +70,15 @@ else
     List<UsersEntity> users = new List<UsersEntity>();
     List<UsersEntity> tmpusers = new List<UsersEntity>();
     List<DepartamentsEntity> departam = new List<DepartamentsEntity>();
+    KardexEntity kardex = new KardexEntity();
 
     protected override async Task OnInitializedAsync()
     {                   
         users = B_Users.UsersList();
         tmpusers = users;
         departam = B_Departaments.DepartamentList();
+        B_Kardex.CreateKardex(kardex, "Operacion Database", "Listado Usuarios", 
+                                "Server=ic10.database.windows.net", "OPERACION DE LECTURA BASE DATOS" );
     }
 
     private void DepartamentChanged(ChangeEventArgs e)

@@ -1604,6 +1604,28 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
         }
       },
+      "Packable/6.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.2/Packable.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/Packable.dll": {}
+        }
+      },
+      "Packable.newtonjson/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1",
+          "Packable": "6.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Packable.newtonjson.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Packable.newtonjson.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2541,11 +2563,11 @@
           "ref/netstandard1.0/System.Resources.ResourceManager.dll": {}
         }
       },
-      "System.Runtime/4.3.0": {
+      "System.Runtime/4.3.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0"
+          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Targets": "1.1.3"
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.dll": {}
@@ -3170,6 +3192,9 @@
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Runtime": "4.3.1"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -5657,6 +5682,32 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "Packable/6.2.0": {
+      "sha512": "ZXdZF5AbQD7iuNXiCPgphoyjoMRQEj9/KLShkv4kmQeaEl7w38365KyP8C+y1rRDMAe4fJvA88//aaBqBvD8Sg==",
+      "type": "package",
+      "path": "packable/6.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Packable.dll",
+        "lib/netcoreapp2.2/Packable.dll",
+        "lib/netstandard2.0/Packable.dll",
+        "packable.6.2.0.nupkg.sha512",
+        "packable.nuspec"
+      ]
+    },
+    "Packable.newtonjson/2.0.0": {
+      "sha512": "RVOiNvByTU+NXyVA2Kp5nP5Kwu5Twe+ALOYdXuE23HXZVMWbeobYhB++UkdFB6NRKuUvgTyC5P+d9p3ONnj5oA==",
+      "type": "package",
+      "path": "packable.newtonjson/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Packable.newtonjson.dll",
+        "packable.newtonjson.2.0.0.nupkg.sha512",
+        "packable.newtonjson.nuspec"
+      ]
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
@@ -8040,10 +8091,10 @@
         "system.resources.resourcemanager.nuspec"
       ]
     },
-    "System.Runtime/4.3.0": {
-      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+    "System.Runtime/4.3.1": {
+      "sha512": "abhfv1dTK6NXOmu4bgHIONxHyEqFjW8HwXPmpY9gmll+ix9UNo4XDcmzJn6oLooftxNssVHdJC1pGT9jkSynQg==",
       "type": "package",
-      "path": "system.runtime/4.3.0",
+      "path": "system.runtime/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8128,7 +8179,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.runtime.4.3.0.nupkg.sha512",
+        "system.runtime.4.3.1.nupkg.sha512",
         "system.runtime.nuspec"
       ]
     },
@@ -9714,6 +9765,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.6",
+      "Packable.newtonjson >= 2.0.0",
       "Swashbuckle.AspNetCore >= 6.3.0"
     ]
   },
@@ -9724,11 +9776,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
+      "projectUniqueName": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
       "projectName": "Maqueta",
-      "projectPath": "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
+      "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
       "packagesPath": "C:\\Users\\JSoriano\\.nuget\\packages\\",
-      "outputPath": "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\",
+      "outputPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9749,11 +9801,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj": {
-              "projectPath": "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj"
+            "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj": {
+              "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Bussines\\Bussines.csproj"
             },
-            "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj": {
-              "projectPath": "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj"
+            "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Entities\\Entities.csproj"
             }
           }
         }
@@ -9781,6 +9833,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.6, )"
+          },
+          "Packable.newtonjson": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I8Bnc0rBUGfkvpnjfU8zYAM8KNWD+Dp+3+LqPJAKtE48/f8HlYCwjee2r6jHPDa1wGDfI70NCM3pg/dTk+BCzg==",
+  "dgSpecHash": "NfJNo8v+9mudXZGju27dmCZk1yIiS1lzS7U4FQgYFdkzb987KlRNvsNyzRGXbVIlx7egAY9jUpjNeHWuJ6ZQeg==",
   "success": true,
-  "projectFilePath": "c:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
+  "projectFilePath": "C:\\Developer\\Visual Studio 2022\\Blazor\\Endava\\demoCard\\Maqueta\\Maqueta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JSoriano\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
@@ -82,6 +82,8 @@
     "C:\\Users\\JSoriano\\.nuget\\packages\\nuget.projectmodel\\5.11.0\\nuget.projectmodel.5.11.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\nuget.protocol\\5.11.0\\nuget.protocol.5.11.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\nuget.versioning\\5.11.0\\nuget.versioning.5.11.0.nupkg.sha512",
+    "C:\\Users\\JSoriano\\.nuget\\packages\\packable\\6.2.0\\packable.6.2.0.nupkg.sha512",
+    "C:\\Users\\JSoriano\\.nuget\\packages\\packable.newtonjson\\2.0.0\\packable.newtonjson.2.0.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -148,7 +150,7 @@
     "C:\\Users\\JSoriano\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
-    "C:\\Users\\JSoriano\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\JSoriano\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\JSoriano\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",

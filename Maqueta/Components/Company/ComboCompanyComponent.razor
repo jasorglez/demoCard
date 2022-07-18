@@ -1,0 +1,78 @@
+﻿@using Bussines
+@using Entities
+
+<th> Test Lists</th>
+
+
+<hr />
+<select class="form-control" @onchange="CampaChanged">
+    <option value="n">See all Companys</option>
+    @foreach (var comp in company)
+    {
+        <option value="@comp.CompanyId">@comp.Name</option>
+    }
+</select>
+<hr />
+
+
+<br />
+@if (campaigns == null)
+  {
+    <p><em>Loading...</em></p>
+  }
+else
+ {
+    <table class="table table-striped align-middle table-bodered">
+        <thead class="table-success">
+            <tr>
+                <th>Name</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var camp in tmpcamp)
+            {
+                <tr>
+                    <td>@camp.Name</td>
+      
+                    <td>
+                        <a href='/campaign/edit/@camp.CampaignId' class="btn btn-secondary" role="button" >
+                            Deposit
+                        </a>
+                     
+                    </td>
+      
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    List<CampaignsEntity> campaigns = new List<CampaignsEntity>();
+    List<CampaignsEntity> tmpcamp = new List<CampaignsEntity>();
+    List<CompanysEntity> company = new List<CompanysEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        campaigns = B_Campaigns.CampaignList();
+        tmpcamp = campaigns;
+        company = B_Company.CompanyList();
+    }
+      private void CampaChanged(ChangeEventArgs e)
+    {
+        var valor2 = e.Value.ToString();
+        if (valor2 != "n")
+        {
+            int valid = int.Parse(e.Value.ToString());
+            tmpcamp = campaigns.Where(u => u.CompanyId == valid).ToList();
+        }
+        else
+        {
+             tmpcamp = campaigns;    
+        }    
+    }
+  
+}

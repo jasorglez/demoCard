@@ -1,19 +1,38 @@
-﻿@inherits LayoutComponentBase
-
-<PageTitle>Maqueta</PageTitle>
+﻿@using Entities
+@inherits LayoutComponentBase
+@inject sessionstate state
+@inject NavigationManager NavManager
 
 <div class="page">
     <div class="sidebar">
         <NavMenu />
     </div>
 
-    <main>
+    <div class="main">
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href @onclick="Logout">___Logout___  </a>
+              @if (@state == null)
+                {
+                   <p><em>Loading...</em></p>
+                }
+                else
+                {
+                   <p><em>Welcome @state.Namesshort</em></p> 
+                }
         </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+        <div class="content px-4">
+            @Body 
+        </div>
+     </div>
 </div>
+
+@code
+{
+    private void Logout()
+    {
+          state = null;
+        NavManager.NavigateTo("/");
+    }
+
+}

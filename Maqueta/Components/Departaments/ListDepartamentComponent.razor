@@ -55,10 +55,13 @@ else
 
 @code {
     List<DepartamentsEntity> departaments = new List<DepartamentsEntity>();
+    KardexEntity kardex = new KardexEntity();
 
     protected override async Task OnInitializedAsync()
     {
         departaments = B_Departaments.DepartamentList();
+        B_Kardex.CreateKardex(kardex, "Main Departaments, Operation Database", "List Departaments GET", 
+                             "Server=ic10.database.windows.net", "OPERACION CON LECTURA BD" );
     }
 
 }

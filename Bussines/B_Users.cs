@@ -14,9 +14,9 @@ namespace Bussines
         {
             using (var db = new EndavaContext())
             {
-                 return db.Users.Where(u => u.Active == true).ToList();
-            }
-        }
+                return db.Users.Where(u => u.Active == true).ToList();
+            }          
+        }        
 
         public static UsersEntity UserById(int id)
         {

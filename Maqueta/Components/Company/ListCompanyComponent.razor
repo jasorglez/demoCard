@@ -59,12 +59,14 @@ else
 
 @code {
     List<CompanysEntity> companys = new List<CompanysEntity>();
- 
+    KardexEntity kardex = new KardexEntity ();
 
     protected override async Task OnInitializedAsync()
     {
         companys = B_Company.CompanyList();
+        B_Kardex.CreateKardex(kardex, "Main Company, operation Database", "List of companys", 
+                                            "Server=ic10.database.windows.net", "OPERACION CON LECTURA BD" );
     }
-
+   
   
 }

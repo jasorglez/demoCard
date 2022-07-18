@@ -14,5 +14,6 @@ namespace Entities
         public String Campo4 { get; set; }
         public Double Campo5 { get; set; }
         public Double Campo6 { get; set; }
+        public string operacion { get; set; }
     }
 }

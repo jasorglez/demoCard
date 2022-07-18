@@ -1,0 +1,59 @@
+﻿@page "/"
+@layout LoginLayout
+@using Entities
+@using Bussines
+@inject sessionstate state
+
+@inject NavigationManager NavManager
+
+  <link href="css/logindesign.css" rel="stylesheet" >
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAY1BMVEX///9IVFveQRt2f4Sjqa3uoI3R1Nb09PXmcVRTX2W6v8Hd3+D3z8aNlJn98/HgTSmvtLfo6urGyczslH/iWTiBio7529RqdHpfaXDzt6nqiXH75+LxrJvkZUaYn6P1w7fofWNnCDT/AAAEDklEQVR4nO2Ya3eyOhBGwzVC5KrWu+3//5UnkwlJtHjsW0ulaz37gx2SABuYZKBCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgK9T7bH/8FM6bLCZWPsxebfSYVRwP1kE4b47xwFsQvtrqAZkzzYLw1VYP8KYLHx5ebfWAUenFq60eEJi+/0Vpcf4r0h+BdH3+G9JvcbNgGlroTj6cI/VS875qMg51y6lZvVNjbcJMQ+GcyBpOhLMNm5MQC26i6zj7cD4MBVtX7CE8+Tm5CsPZ4At25sOjX0iWPpxPdo/W7pMPV3Os6IHTYsx/lsUxkD6MSX/M8TVk702D0JfxvZfev9rVs3amtQ+HNS9e1056/fVjyul0mbdmSAQfHoYy3ryJIWmaLy8eXZVMKWyo7QxsjhRqznFTi5rKeKb/NvF5weEXqaJoemlLfWhOVLqXFK45XC5P68O/FvDoF6V9wd4Hif4vmWz5XWlX0DMffmOd+11pv7gdnymDr5Ie+xrvyjRNe7uR57kSklqU31/pzTyU7to0LaVQerT5GVZCaXbX9HwAvdk9L/3xSVrqNYEoWrNJYim3JPZ8ams2d2qQlhu7R6J/BW2U9kStjiutvOMD0B7p89KHW2lVRAOVlXbszA3MwyaSlruwRfT6Z2NPRJenRDn0Fc9I+zK+D0JxK5DeSJvLkEXYQtLJ1RghaADnR0dXKtRV/7el3UK3rn1oOigTipxqHQXSSrdSdCYFpKkoUaEzvt9a6dKOUBsrXbn8oK6LuahtrifG7jlpW8apYAeh4LvEM44UWpbm7KZT9uGIiqU3bkTJ0vmQWqZLdfby9UPaPiUt6tU6Xh+OLlxxNfTnM482MdIFN7TmjMEIcTvC3FO+PNMi6Rab/S7cL5+TvkPLd9OwNQaRW9Zyc8Y08muD6VPBvLPSF3uU0jwD2sr9Hj8vTUrbhCnuSgcKiW2+ku7s06Ds6Eyj9HtMI329FHxHmh4S5UdB2eEa5y7NWdZzJv2KdJt7xqWHrHfSlxtpzo+K8yKZOqfbYJoFYoF0GZzX9HV+hL+pG8qPgmfozdT9eWkV3b643Uors4yFfb4AemlzaVa29IvkNEueqSB8W2Q+Km0czQgZFBeWaqNBmuwKW1PoUXA5era43MMUtbTTr6c7VvskfeERtijrPppv0UaJPomctOBXRb4Wai9K2bXmrWUCabEJ1o5+TPrxCxPRuwOIH3thuo/cusMXakza+vDzN31dEbbY41A4VHf3ajpRemhSdigqM7s+S4ucX18rOfRJvteJCpbkyk8/9xFwmWgisl6btvn/DVBtWl59NukvtFbdG20P2U/+3ygAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4I/zH3FiKokiMgFSAAAAAElFTkSuQmCC" />
+    </div>
+
+    <!-- Login Form -->
+    <EditForm Model="@users" OnValidSubmit="UserOk">
+      <input type="text" id="login" class="fadeIn second" @bind-value="users.Namesshort" name="login" placeholder="Login">
+      <input type="text" id="password" class="fadeIn third" @bind-value="users.Password" name="pass" placeholder="Password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </EditForm>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      @message
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+
+   
+@code
+{
+    UsersEntity users = new UsersEntity();
+    List<UsersEntity> userlist = new List<UsersEntity>();
+    string message;
+
+    private void UserOk()
+    {
+        userlist = B_Users.UsersList();
+        if (userlist.Any(u=>u.Namesshort.Equals(users.Namesshort) && u.Password.Equals(users.Password)))
+        {
+            state.Namesshort = users.Namesshort;
+            //state.Email = 
+            NavManager.NavigateTo("/Card");
+            message = "Your Password is Correct";
+        }
+        else
+        {
+            message = "Your User or Password is wrong";
+        }
+    }
+
+}
